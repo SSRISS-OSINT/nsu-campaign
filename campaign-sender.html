@@ -1,0 +1,119 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<h1 style="text-align: center;">NLSU Screening Protest Email Campaign</h1>
+<div>
+<p>Click on a button below to send your email</p>
+  <button onclick="openShortEmail()" style="
+    background-color: #0b57d0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+  ">
+    Template 1 (Short)
+  </button>
+<br><br>
+  <button onclick="openModerateEmail()" style="
+    background-color: #0b57d0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+  ">
+    Template 2 (Medium)
+  </button>
+<br><br>
+  <button onclick="openLongEmail()" style="
+    background-color: #0b57d0;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+  ">
+    Template 3 (Long)
+  </button>
+
+</div>
+
+<script>
+const to = "vc@nls.ac.in";
+
+const cc = [
+  "registrar@nls.ac.in",
+  "lawsoc@nls.ac.in",
+  "compolbcp@ksp.gov.in"
+].join(",");
+
+function openEmail(subject, body) {
+  const mailto =
+    "mailto:" + to +
+    "?cc=" + encodeURIComponent(cc) +
+    "&subject=" + encodeURIComponent(subject) +
+    "&body=" + encodeURIComponent(body);
+
+  window.location.href = mailto;
+}
+
+function openShortEmail() {
+  const subject = 'Request for Cancellation of Proposed “Solidarity Screening” at NLSIU';
+
+  const body = `Respected Vice-Chancellor,
+I am writing to request reconsideration of the proposed “solidarity screening” of *Prisoner No. 626710 is Present* concerning Umar Khalid, scheduled for 14 September 2026. Umar Khalid and Sharjeel Imam are facing serious criminal proceedings, and the Supreme Court rejected their bail appeals on 5 January 2026, noting the prima facie material regarding their alleged roles in the conspiracy. In these circumstances, presenting their incarceration through a “solidarity” programme risks appearing less like academic discussion and more like institutional endorsement of one side of a pending judicial matter.
+
+Given NLSIU’s unique relationship with the judiciary, including the Chief Justice of India serving as Chancellor, I believe the University should exercise particular caution. This is not against free speech or academic debate. I simply request that NLSIU avoid lending institutional legitimacy to a political narrative concerning matters still before the courts.
+
+I respectfully request that the screening be cancelled.
+
+Yours faithfully,`;
+
+  openEmail(subject, body);
+}
+
+function openModerateEmail() {
+  const subject = 'Request to Reconsider and Cancel the Proposed “Solidarity Screening” at NLSIU';
+
+  const body = `Respected Vice-Chancellor Sir/Madam,
+I am writing as a concerned citizen regarding the proposed “solidarity screening” of *Prisoner No. 626710 is Present* concerning Umar Khalid. I find it troubling that a programme marking “Political Prisoners Day” would centre on individuals currently facing serious criminal proceedings. India has a long and very different history of political imprisonment involving leaders such as Mahatma Gandhi, Bal Gangadhar Tilak and Subhas Chandra Bose, making this comparison highly debatable.
+
+The Supreme Court, on 5 January 2026, rejected the bail appeals of Umar Khalid and Sharjeel Imam and observed that the material before it, at that stage, disclosed a prima facie central and formative role attributed to them in the alleged conspiracy. In that context, holding a “solidarity” screening risks making the University appear to take a political position on matters that are still before the courts, particularly given the seriousness of the allegations connected with the 2020 Delhi riots, public order and national integrity.
+
+NLSIU also has a special responsibility because the Chief Justice of India serves as its Chancellor and sitting Supreme Court judges are represented in its governing bodies. What the University endorses therefore carries wider institutional significance. I respectfully request that the screening scheduled for 14 September 2026 be cancelled.
+
+This is not a request to restrict free speech or academic debate. It is simply a request that a leading national law university avoid appearing to endorse one side of a serious matter that remains under judicial consideration. I hope you will kindly intervene.
+
+Yours faithfully,`;
+
+  openEmail(subject, body);
+}
+
+function openLongEmail() {
+  const subject = 'Urgent Request for Cancellation of the Proposed “Solidarity Screening” at NLSIU';
+
+  const body = `Respected Vice-Chancellor,
+I am writing as a concerned and constitution-abiding citizen with deep faith in the Constitution of India, the rule of law, national integrity and communal harmony. I am concerned about the proposed “solidarity screening” of Prisoner No. 626710 is Present concerning Umar Khalid.
+
+There is a profound irony in observing a “Political Prisoners Day” in India by centring the programme around individuals presently facing serious criminal proceedings, when the history of India’s freedom struggle includes figures such as Mahatma Gandhi, Bal Gangadhar Tilak, Subhas Chandra Bose and numerous other national leaders who spent years of their lives in political imprisonment under colonial rule. Equating such a historical legacy with the present criminal proceedings against accused persons is, at the very least, deeply contestable.
+
+More importantly, the Supreme Court on 5 January 2026 rejected the bail appeals of both Umar Khalid and Sharjeel Imam, holding that the material before it, at the present stage, disclosed a prima facie central and formative role attributed to them in the alleged conspiracy. 
+
+Against this background, presenting their incarceration through a “solidarity” programme risks converting a pending judicial matter into a political endorsement. This is particularly troubling in relation to allegations concerning the 2020 Delhi riots and, in Sharjeel Imam’s case, prosecution allegations concerning calls to disrupt the corridor connecting the Northeast with the rest of India—issues directly touching upon public order and the sovereignty and integrity of India.
+
+It is also important to remember that NLSIU is not an ordinary academic institution. The Chief Justice of India is the Chancellor of NLSIU, and the University’s governing bodies include several sitting judges of the Supreme Court.  The University’s conduct therefore inevitably carries significance for how the rule of law and the institutions of justice are perceived by students and the wider public.
+
+I therefore respectfully request you to cancel the proposed screening scheduled for 14 September 2026. This request is not against freedom of speech, dissent or academic discussion. It is made precisely because I believe that constitutional liberty, national integrity, communal harmony and respect for judicial institutions must all be upheld together.
+
+A premier national law university should not appear to lend institutional legitimacy to a political narrative surrounding individuals whose cases remain before the courts. I sincerely request your urgent intervention in this matter.
+
+Yours faithfully,`;
+
+  openEmail(subject, body);
+}
+</script>
